@@ -1,9 +1,10 @@
 <script setup lang="ts">
 
+import Alarm from "../../views/tools/Alarm.vue";
 </script>
 
 <template>
-  <span>Home</span>
+  <Alarm />
 </template>
 
 <style scoped>

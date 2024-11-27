@@ -7,7 +7,12 @@ const host = process.env.TAURI_DEV_HOST;
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
   plugins: [vue()],
+    define: {
+        global: {},
+        'process.env': {
 
+        }
+    },
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
   //
   // 1. prevent vite from obscuring rust errors
@@ -29,4 +34,9 @@ export default defineConfig(async () => ({
       ignored: ["**/src-tauri/**"],
     },
   },
+    resolve: {
+        alias: {
+            '@':'/src',
+        }
+    },
 }));
