@@ -1,10 +1,6 @@
-<script setup>
-import { useRouter, useRoute } from 'vue-router'
+<script setup lang="ts">
 import Sidebar from './sideBar/index.vue';
-import NavTabVue from './basic/NavTab.vue';
 import NavHeaderVue from "./basic/NavHeader.vue";
-const route = useRoute();
-const key = route.fullPath
 </script>
 
 <template>

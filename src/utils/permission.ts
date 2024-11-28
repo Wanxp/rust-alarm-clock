@@ -1,4 +1,4 @@
-import { useStore } from '../store'
+import { useStore } from '@/store'
 
 export const checkPermission = (value: string[]): boolean => {
   if (value && value instanceof Array && value.length > 0) {
