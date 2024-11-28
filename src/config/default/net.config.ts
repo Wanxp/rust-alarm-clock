@@ -1,5 +1,5 @@
-import { ContentType, Device } from '@/constant/headers'
-import { InfoShowType } from '@/constant/network'
+import { ContentType, Device } from '../../constant/headers'
+import { InfoShowType } from '../../constant/network'
 interface Headers{
     token: string
     contentType: string
@@ -10,6 +10,7 @@ interface Headers{
 const _header: Headers = {
   token: '',
   contentType: ContentType.JSON,
+  version: '',
   device: Device.PC
 }
 
@@ -22,7 +23,7 @@ export interface NetworkConfig{
 }
 
 const networkConfig: NetworkConfig = {
-  host: process.env.VUE_APP_BASE_API,
+  host: '',
   timeout: 10000,
   loading: false,
   errorShowType: InfoShowType.LOG,

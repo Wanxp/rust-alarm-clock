@@ -1,6 +1,6 @@
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-import router from '@/router'
+import router from './router'
 import { RouteLocationNormalized } from 'vue-router'
 import { useStore } from './store'
 import { UserActionTypes } from './store/modules/user/action-types'
