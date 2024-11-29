@@ -67,8 +67,8 @@
 import path from 'path'
 import { computed, defineComponent, PropType } from 'vue'
 import { RouteRecordRaw } from 'vue-router'
-import { isExternal } from '@/utils/validate'
 import SidebarItemLink from './SidebarItemLink.vue'
+import {isExternal} from "../../utils/validate.ts";
 export default defineComponent({
   props: {
     item: {

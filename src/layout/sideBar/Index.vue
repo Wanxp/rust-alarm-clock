@@ -19,6 +19,7 @@
           :item="route"
           :base-path="route.path"
           :is-collapse="isCollapse"
+          :isFirstLevel="false"
         />
       </el-menu>
     </el-scrollbar>
@@ -28,8 +29,8 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 import SidebarItem from './SidebarItem.vue'
-import { useStore } from '@/store'
 import { useRoute } from 'vue-router'
+import {useStore} from "../../store";
 
 export default defineComponent({
   components: {
@@ -42,6 +43,7 @@ export default defineComponent({
       return store.state.app.sidebar
     })
     const routes = computed(() => {
+      //@ts-ignore
       return store.state.permission.routes
     })
     console.log(routes)

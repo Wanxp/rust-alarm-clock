@@ -1,1 +1,1 @@
-pub mod alarmclock;
+pub mod alarm;

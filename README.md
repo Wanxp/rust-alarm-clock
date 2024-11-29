@@ -16,8 +16,10 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
 
 
-
-参考：
-https://tauritutorials.com/blog/building-a-todo-app-in-tauri-with-sqlite-and-sqlx
-https://medium.com/@raditzlawliet/build-crud-rest-api-with-rust-and-mysql-using-axum-sqlx-d7e50b3cd130
-https://blog.csdn.net/xuguangyuansh/article/details/108391683
+## 编译
+### Docker
+```shell
+docker build -t "tauri-builder" .
+docker run --rm -it --entrypoint=/bin/bash -v .:/app --network host   tauri-builder:latest
+pnpm tauri build
+```

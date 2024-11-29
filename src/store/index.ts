@@ -1,8 +1,8 @@
 import { createStore, createLogger } from 'vuex'
 // import createPersistedState from 'vuex-persistedstate'
-import { store as app, AppStore, AppState } from '@/store/modules/app'
-import { store as permission, PermissionStore, PermissionState } from '@/store/modules/permission'
-import { store as user, UserStore, UserState } from '@/store/modules/user'
+import { store as app, AppStore, AppState } from './modules/app'
+import { store as permission, PermissionStore, PermissionState } from './modules/permission'
+import { store as user, UserStore, UserState } from './modules/user'
 
 export interface RootState {
     app: AppState

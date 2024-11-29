@@ -22,7 +22,8 @@ router.beforeEach(async(to: RouteLocationNormalized, _: RouteLocationNormalized,
           await store.dispatch(UserActionTypes.ACTION_GET_USER_INFO, undefined)
           const roles = store.state.user.roles
           store.dispatch(PermissionActionType.ACTION_SET_ROUTES, roles)
-          store.state.permission.dynamicRoutes.forEach((route) => {
+          //@ts-ignore
+          store.state.permission.dynamicRoutes.forEach((route:any) => {
             router.addRoute(route)
           })
           next({ ...to, replace: true })
@@ -47,6 +48,7 @@ router.beforeEach(async(to: RouteLocationNormalized, _: RouteLocationNormalized,
 })
 
 router.afterEach((to: RouteLocationNormalized) => {
+  to.name
   NProgress.done()
 
 })

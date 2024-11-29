@@ -1,7 +1,9 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import path from 'path'
+import {fileURLToPath} from "node:url";
 
+//@ts-ignore
 const host = process.env.TAURI_DEV_HOST;
 
 // https://vitejs.dev/config/
@@ -35,8 +37,9 @@ export default defineConfig(async () => ({
     },
   },
   resolve: {
+    extensions: ['.js','.vue','.json','.ts'],
     alias: {
-      "@": path.join(__dirname, "./src"),
+      '@': path.resolve(__dirname, './src'),
     }
-  },
+  }
 }));

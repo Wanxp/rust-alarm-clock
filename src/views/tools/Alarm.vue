@@ -20,12 +20,12 @@ function updateValue(index: number, newValue: string) {
 
 
 async function submit() {
-  result.value = await invoke("save_clock", { times: values.value });
+  result.value = await invoke("save_alarm", { times: values.value });
 }
 
 
 async function load_clock() {
-  result.value = await invoke("load_clock");
+  result.value = await invoke("load_alarm");
 }
 
 onMounted(async () => {
@@ -36,7 +36,7 @@ onMounted(async () => {
 
 <template>
     <el-row v-for="(item, index) in values" :key="index" :span="4" style="margin: 0 auto">
-      <el-col :span="4"><el-time-picker :model-value="item" @update:model-value="newValue => updateValue(index, newValue)" style="width: 240px" placeholder="Please input" /></el-col>
+      <el-col :span="4"><el-time-picker :model-value="item" @update:model-value="(newValue:string) => updateValue(index, newValue)" style="width: 240px" placeholder="Please input" /></el-col>
       <el-button  circle @click="removeTime(index)" style="margin: 0 auto " >-</el-button>
     </el-row>
     <el-button  circle @click="addTime" style="margin: 0 auto ">+</el-button>

@@ -1,5 +1,5 @@
 
-import { getSidebarStatus, getSize } from '@/utils/cookies'
+import { getSidebarStatus, getSize } from '../../../utils/cookies'
 
 export enum DeviceType {
   Mobile,
@@ -22,5 +22,6 @@ export const state: AppState = {
     opened: getSidebarStatus() !== 'closed',
     withoutAnimation: false
   },
-  size: getSize() || 'medium'
+  size: getSize() || 'medium',
+  language: 'en'
 }

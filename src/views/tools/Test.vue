@@ -1,8 +1,4 @@
 <script lang="ts" setup>
-import {onMounted, ref} from 'vue'
-import {invoke} from "@tauri-apps/api/core";
-const values = ref([''])
-const result = ref()
 
 </script>
 

@@ -1,10 +1,10 @@
 import { ActionTree, ActionContext } from 'vuex'
-import { RootState } from '@/store'
+import { RootState } from '../../../store'
 import { PermissionState } from './state'
 import { Mutations } from './mutations'
 import { PermissionMutationType } from './mutation-types'
 import { PermissionActionType } from './action-types'
-import { asyncRoutes } from '@/router'
+import { asyncRoutes } from '../../../router'
 import { RouteRecordRaw } from 'vue-router'
 
 type AugmentedActionContext = {
@@ -18,6 +18,7 @@ const hasPermission = (roles: string[], route: RouteRecordRaw) => {
   if (route.meta && route.meta.roles) {
     return roles.some(role => {
       if (route.meta?.roles !== undefined) {
+        //@ts-ignore
         return route.meta.roles.includes(role)
       }
     })

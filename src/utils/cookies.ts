@@ -1,4 +1,4 @@
-import Keys from '@/constant/key'
+import Keys from '../constant/key'
 import Cookies from 'js-cookie'
 
 export const getSidebarStatus = () => Cookies.get(Keys.sidebarStatusKey)

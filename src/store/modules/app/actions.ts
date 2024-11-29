@@ -1,7 +1,7 @@
 import { ActionTree, ActionContext } from 'vuex'
 
 // eslint-disable-next-line import/no-cycle
-import { RootState } from '@/store'
+import { RootState } from '../../../store'
 import { AppState, DeviceType } from './state'
 import { Mutations } from './mutations'
 import { AppMutationTypes } from './mutation-types'

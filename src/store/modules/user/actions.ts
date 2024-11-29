@@ -1,13 +1,13 @@
 import { ActionTree, ActionContext } from 'vuex'
-import { RootState, useStore } from '@/store'
+import { RootState, useStore } from '../../../store'
 import { state, UserState } from './state.ts'
 import { Mutations } from './mutations.ts'
 import { UserMutationTypes } from './mutation-types.ts'
 import { UserActionTypes } from './action-types.ts'
-import { loginRequest, userInfoRequest } from '@/apis/user'
-import { removeToken, setToken } from '@/utils/cookies'
+import { loginRequest } from '../../../apis/user'
+import { removeToken, setToken } from '../../../utils/cookies'
 import { PermissionActionType } from '../permission/action-types.ts'
-import router, { resetRouter } from '@/router'
+import router, { resetRouter } from '../../../router'
 import { RouteRecordRaw } from 'vue-router'
 
 type AugmentedActionContext = {
