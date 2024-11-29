@@ -20,6 +20,7 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 ### Docker
 ```shell
 docker build -t "tauri-builder" .
-docker run --rm -it --entrypoint=/bin/bash -v .:/app --network host   tauri-builder:latest
+docker run --rm -it --entrypoint=/bin/bash -v .:/app --network host -e PUID="$(id -u)" -e PGID="$(id -g)" tauri-builder:latest
+cd /app
 pnpm tauri build
 ```
