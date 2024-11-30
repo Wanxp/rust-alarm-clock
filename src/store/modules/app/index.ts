@@ -6,7 +6,7 @@ import {
 } from 'vuex'
 
 // TODO: How to surpass cyclical dependency linting errors cleanly?
-import { RootState } from '../../../store'
+import { RootState } from '@/store'
 import { state } from './state'
 import { mutations, Mutations } from './mutations'
 import { actions, Actions } from './actions'

@@ -18,7 +18,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
-import {isExternal} from "../../utils/validate.ts";
+import {isExternal} from "@/utils/validate.ts";
 export default defineComponent({
   props: {
     to: {

@@ -1,4 +1,4 @@
-import { getToken } from '../../../utils/cookies'
+import { getToken } from '@/utils/cookies'
 
 export interface UserState{
     token: string

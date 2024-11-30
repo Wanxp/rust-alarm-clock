@@ -2,7 +2,7 @@
 import { MutationTree } from 'vuex'
 import { AppState, DeviceType } from './state'
 import { AppMutationTypes } from './mutation-types'
-import { setSidebarStatus, setLanguage, setSize } from '../../../utils/cookies'
+import { setSidebarStatus, setLanguage, setSize } from '@/utils/cookies'
 
 export type Mutations<S = AppState> = {
   [AppMutationTypes.TOGGLE_SIDEBAR](state: S, withoutAnimation: boolean): void

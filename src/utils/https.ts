@@ -1,6 +1,6 @@
-import { useStore } from '../store'
+import { useStore } from '@/store'
 import HttpClient, { HttpClientConfig } from 'axios-mapper'
-import networkConfig from '../config/default/net.config'
+import networkConfig from '@/config/default/net.config'
 const https = (hasToken: Boolean = true) => {
   const config: HttpClientConfig = {
     baseURL: networkConfig.host,

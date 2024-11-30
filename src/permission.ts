@@ -2,11 +2,11 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import router from './router'
 import { RouteLocationNormalized } from 'vue-router'
-import { useStore } from './store'
-import { UserActionTypes } from './store/modules/user/action-types'
-import { PermissionActionType } from './store/modules/permission/action-types'
+import { useStore } from '@/store'
+import { UserActionTypes } from '@/store/modules/user/action-types'
+import { PermissionActionType } from '@/store/modules/permission/action-types'
 import { ElMessage } from 'element-plus'
-import whiteList from './config/default/whitelist'
+import whiteList from '@/config/default/whitelist'
 NProgress.configure({ showSpinner: false })
 
 router.beforeEach(async(to: RouteLocationNormalized, _: RouteLocationNormalized, next: any) => {

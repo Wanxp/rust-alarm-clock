@@ -15,12 +15,36 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
 
+## 开发
+### 全栈
+```shell
+pnpm install
+pnpm tauri dev
+```
+### 仅前端
+```shell
+pnpm install
+pnpm dev
+```
+
 
 ## 编译
+### 本地
+```shell
+  pnpm install
+    pnpm tauri build
+```    
+  
 ### Docker
+修改Dockerfile，取消注释，代理ip和端口根据实际情况修改，如果不需要代理，可以不用修改
+```Dockerfile
+#ENV https_proxy=http://127.0.0.1:19999
+#ENV http_proxy=http://127.0.0.1:19999
+```
+
 ```shell
 docker build -t "tauri-builder" .
 docker run --rm -it --entrypoint=/bin/bash -v .:/app --network host -e PUID="$(id -u)" -e PGID="$(id -g)" tauri-builder:latest
-cd /app
 pnpm tauri build
 ```
+输出结果在`./src-tauri/target/release/bundle`目录下

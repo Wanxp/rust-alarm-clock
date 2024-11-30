@@ -5,7 +5,7 @@
   "identifier": "com.alarm-clock-plus.app",
   "build": {
     "beforeDevCommand": "pnpm dev",
-    "devUrl": "http://localhost:1420/",
+    "devUrl": "http://0.0.0.0:4000",
     "beforeBuildCommand": "pnpm build",
     "frontendDist": "../dist"
   },
@@ -30,6 +30,10 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
-  }
+    ],
+    "linux": {
+      "appimage": {
+        }
+      }
+    }
 }

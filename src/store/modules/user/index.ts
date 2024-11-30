@@ -5,7 +5,7 @@ import {
   Module
 } from 'vuex'
 
-import { RootState } from '../../../store'
+import { RootState } from '@/store'
 import { state } from './state.ts'
 import { mutations, Mutations } from './mutations.ts'
 import { actions, Actions } from './actions.ts'

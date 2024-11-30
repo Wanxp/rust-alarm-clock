@@ -1,5 +1,5 @@
-import { ContentType, Device } from '../../constant/headers'
-import { InfoShowType } from '../../constant/network'
+import { ContentType, Device } from '@/constant/headers'
+import { InfoShowType } from '@/constant/network'
 interface Headers{
     token: string
     contentType: string

@@ -1,5 +1,5 @@
 
-import { getSidebarStatus, getSize } from '../../../utils/cookies'
+import { getSidebarStatus, getSize } from '@/utils/cookies'
 
 export enum DeviceType {
   Mobile,

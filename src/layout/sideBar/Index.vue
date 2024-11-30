@@ -30,7 +30,7 @@
 import { computed, defineComponent } from 'vue'
 import SidebarItem from './SidebarItem.vue'
 import { useRoute } from 'vue-router'
-import {useStore} from "../../store";
+import {useStore} from "@/store";
 
 export default defineComponent({
   components: {

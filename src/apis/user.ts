@@ -1,8 +1,8 @@
 import { RequestParams, ContentType, Method } from 'axios-mapper'
-import {RootObject} from "../model/rootObject.ts";
-import {LoginModel} from "../views/login/model/loginModel.ts";
-import {UserInfoModel, Users} from "../model/userModel.ts";
-import https from "../utils/https.ts";
+import {RootObject} from "@/model/rootObject.ts";
+import {LoginModel} from "@/views/login/model/loginModel.ts";
+import {UserInfoModel, Users} from "@/model/userModel.ts";
+import https from "@/utils/https.ts";
 
 export const loginRequest = (userInfo: RequestParams) => {
   return https(false).request<RootObject<LoginModel>>('user/login', Method.POST, userInfo, ContentType.json)
