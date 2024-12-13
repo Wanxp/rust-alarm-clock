@@ -30,8 +30,7 @@ pnpm dev
 
 ## 编译
 ### prerequirements
-```shell
-### for ubuntu develop
+#### for ubuntu develop
 ```shell
 curl --proto '=https' --tlsv0.2 -sSf https://sh.rustup.rs | sh 
 sudo apt install libwebkit1gtk-4.1-dev -y \
