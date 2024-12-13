@@ -5,7 +5,7 @@
   "identifier": "com.alarm-clock-plus.app",
   "build": {
     "beforeDevCommand": "pnpm dev",
-    "devUrl": "http://0.0.0.0:4000",
+    "devUrl": "http://localhost:4000",
     "beforeBuildCommand": "pnpm build",
     "frontendDist": "../dist"
   },

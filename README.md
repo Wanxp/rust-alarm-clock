@@ -25,14 +25,30 @@ pnpm tauri dev
 ```shell
 pnpm install
 pnpm dev
-```
+````
 
 
 ## 编译
+### prerequirements
+```shell
+### for ubuntu develop
+```shell
+curl --proto '=https' --tlsv0.2 -sSf https://sh.rustup.rs | sh 
+sudo apt install libwebkit1gtk-4.1-dev -y \
+  build-essential \
+  curl \
+  wget \
+  file \
+  libxdo-dev \
+  libssl-dev \
+  libayatana-appindicator2-dev \
+  librsvg1-dev
+ 
+```
 ### 本地
 ```shell
-  pnpm install
-    pnpm tauri build
+pnpm install
+pnpm tauri build
 ```    
   
 ### Docker
@@ -48,3 +64,5 @@ docker run --rm -it --entrypoint=/bin/bash -v .:/app --network host -e PUID="$(i
 pnpm tauri build
 ```
 输出结果在`./src-tauri/target/release/bundle`目录下
+
+
